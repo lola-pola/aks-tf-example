@@ -1,6 +1,7 @@
 # aks-tf-example
 
 
+
 ## Prerequisites
 ```
 az account list
@@ -13,6 +14,7 @@ export ARM_SUBSCRIPTION_ID="SUBSCRIPTION_ID"
 export ARM_TENANT_ID=$DATA | jq .tenant
 export ARM_CLIENT_SECRET=$DATA | jq .password
 ```
+
 
 ## Terraform Deployment
 ```
