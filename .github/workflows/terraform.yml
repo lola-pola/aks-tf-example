@@ -49,12 +49,7 @@ jobs:
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
-      
-    # Run a terraform validate for push and PR on non-main branch
-    # Run even if formatting fails
-    - name: Terraform Validate
-      id: validate
-      run: terraform validate -no-color
+
 
     - name: Terraform Plan
       id: plan
