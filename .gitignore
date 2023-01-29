@@ -16,7 +16,10 @@ __pycache__/
 *.terraform.tfvars.json.lock.info
 *.terraform.tfstate
 *.terraform.tfstate.backup
-    
+terraform.tfstate.lock.info
+template.tfvars.json
+template.tfvars.json.backup
+
 # Distribution / packaging
 .Python
 build/
