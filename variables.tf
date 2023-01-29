@@ -1,6 +1,6 @@
 # varaible "name" 
 variable "name" {
-  type = string
+  type    = string
   default = "elhays"
 }
 
@@ -8,23 +8,23 @@ variable "name" {
 variable "tags_map" {
   type = map(string)
   default = {
-    env = "Production",
-    elhay = "test",
-    upgrade = "test",
-    version = "1.25.4",
+    env          = "Production",
+    elhay        = "test",
+    upgrade      = "test",
+    version      = "1.25.4",
     last_version = "1.19.07"
-     ManagedBy = "Terraform"
+    ManagedBy    = "Terraform"
   }
 }
 
 
 variable "node_labels" {
-  type = map(string)
-  default = {"test" = "test"}
+  type    = map(string)
+  default = { "test" = "test" }
 }
 
 variable "node_taints" {
-  type = set(string)
+  type    = set(string)
   default = ["kubernetes.azure.com/test=test:NoSchedule"]
 }
 
@@ -103,7 +103,7 @@ variable "resource_group_name_prefix" {
 }
 
 variable "kubernetes_version" {
-  default     = "1.25.4"
+  default = "1.25.4"
   # default     = "1.24.6"
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }

@@ -5,13 +5,13 @@ resource "random_uuid" "test" {
 
 # varaible "log_analytics_workspace_location"
 resource "azurerm_resource_group" "elhays" {
-  name     = "${var.cluster_name}"  
+  name     = var.cluster_name
   location = var.resource_group_location
 }
 
 resource "azurerm_kubernetes_cluster" "elhays" {
-  name                = "${var.cluster_name}"  
-  dns_prefix          = "${var.cluster_name}"  
+  name                = var.cluster_name
+  dns_prefix          = var.cluster_name
   location            = var.resource_group_location
   resource_group_name = azurerm_resource_group.elhays.name
   kubernetes_version  = var.kubernetes_version
@@ -30,7 +30,7 @@ resource "azurerm_kubernetes_cluster" "elhays" {
     type = "SystemAssigned"
   }
 
-  tags =  var.tags_map
+  tags = var.tags_map
 }
 
 
@@ -77,7 +77,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "labels" {
   vm_size               = var.vm_size
   enable_auto_scaling   = var.enable_auto_scaling
   tags                  = var.tags_map
-  node_labels           = {"kubernetes.azure.com/scalesetpriority" = "spot"}
+  node_labels           = { "kubernetes.azure.com/scalesetpriority" = "spot" }
 }
 
 resource "azurerm_kubernetes_cluster_node_pool" "labelstaints" {
@@ -88,7 +88,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "labelstaints" {
   vm_size               = var.vm_size
   enable_auto_scaling   = var.enable_auto_scaling
   tags                  = var.tags_map
-  node_taints           = ["kubernetes.azure.com/scalesetpriority=spot:NoSchedule"] 
+  node_taints           = ["kubernetes.azure.com/scalesetpriority=spot:NoSchedule"]
 }
 
 
