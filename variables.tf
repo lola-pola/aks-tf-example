@@ -4,8 +4,6 @@ variable "name" {
   default = "elhays"
 }
 
-
-
 # tags map
 variable "tags_map" {
   type = map(string)
@@ -18,13 +16,12 @@ variable "tags_map" {
     ManagedBy    = "Terraform"
   }
 }
-
-
+## varaible "kubernetes_version"
 variable "node_labels" {
   type    = map(string)
   default = { "test" = "test" }
 }
-
+## varaible "node_labels"
 variable "node_taints" {
   type    = set(string)
   default = ["kubernetes.azure.com/test=test:NoSchedule"]
