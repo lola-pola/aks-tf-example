@@ -102,7 +102,7 @@ variable "resource_group_name_prefix" {
 }
 
 variable "kubernetes_version" {
-  default = "1.25.4"
+  default = "1.25.5"
   # default     = "1.24.6"
   description = "Prefix of the resource group name that's combined with a random ID so name is unique in your Azure subscription."
 }
