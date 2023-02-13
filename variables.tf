@@ -11,7 +11,7 @@ variable "tags_map" {
     env          = "Production",
     elhay        = "test",
     upgrade      = "test",
-    version      = "1.25.5",
+    version      = "1.25.4",
     last_version = "1.19.07"
     ManagedBy    = "Terraform"
   }
